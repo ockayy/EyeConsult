@@ -1,0 +1,319 @@
+/* ---------------------------------------
+   Root Variables for Theming & Sizing
+--------------------------------------- */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --secondary-color: #28a745;
+  --accent-color: #70fff1;
+  --background-light: #f4f4f9;
+  --text-color: #333;
+  --button-text-color: #fff;
+  --border-radius: 25px;
+  --spacing-small: 8px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.25rem;
+}
+
+/* --------------------------
+   Global & Body Styles
+-------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
+/* --------------------------
+   Hero Section
+-------------------------- */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-medium);
+}
+
+.hero-content .highlight {
+  color: var(--accent-color);
+}
+
+.hero-buttons {
+  margin-top: var(--spacing-medium);
+}
+
+/* --------------------------
+   Homepage Button Styles
+   (using .hp-btn to avoid conflicts)
+-------------------------- */
+.hp-btn {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 15px 30px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.hp-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------
+   Info Section
+-------------------------- */
+.info-section {
+  background: #fff;
+  padding: var(--spacing-large) 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.info-section h2 {
+  margin-bottom: var(--spacing-large);
+}
+
+.info-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--spacing-medium);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-medium);
+}
+
+.info-card {
+  background: #f9f9f9;
+  padding: var(--spacing-medium);
+  border-radius: 10px;
+  flex: 1 1 250px;
+  max-width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------
+   OCT Section
+-------------------------- */
+.oct-section {
+  background: #e9ecef;
+  padding: var(--spacing-large) 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.oct-section h2 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.oct-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+}
+
+.oct-content img {
+  max-width: 45%;
+  width: 300px;
+}
+
+/* --------------------------
+   CTA Section
+-------------------------- */
+.cta-section {
+  background-color: var(--secondary-color);
+  color: var(--button-text-color);
+  padding: var(--spacing-large) 20px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.cta-section h2 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+/* --------------------------
+   Testimonials Section
+-------------------------- */
+.testimonials-section {
+  background: #fff;
+  padding: var(--spacing-large) 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.testimonials-section h2 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.testimonial {
+  background: #f1f1f1;
+  margin: var(--spacing-medium) auto;
+  padding: var(--spacing-medium);
+  border-radius: 10px;
+  max-width: 600px;
+  font-style: italic;
+}
+
+/* --------------------------
+   Newsletter Subscription Section
+-------------------------- */
+.newsletter-section {
+  background: var(--background-light);
+  padding: var(--spacing-large) 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.newsletter-section input[type="email"] {
+  padding: 10px;
+  width: 300px;
+  max-width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: var(--spacing-small);
+  font-size: 1rem;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.subscribe-button:hover {
+  background: var(--primary-hover);
+}
+
+/* --------------------------
+   Footer
+-------------------------- */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: var(--spacing-medium);
+}
+
+/* --------------------------
+   Animations
+-------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------
+   Responsive Styles
+-------------------------- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oct-content {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+/* BlogDisplay.css */
+.blog-display {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-display img.blog-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .blog-display h1 {
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,43 @@
+Patients
+Name	Email	Password
+Alice Johnson	alice.johnson@example.com	patient1
+Bob Smith	bob.smith@example.com	patient2
+Carol Davis	carol.davis@example.com	patient3
+David Miller	david.miller@example.com	patient4
+Eva Garcia	eva.garcia@example.com	patient5
+
+Doctors
+Name	Email	Password
+Dr. Ayesha Khan	ayesha.khan@example.com	doctor1
+Dr. Hassan Raza	hassan.raza@example.com	doctor2
+Dr. Fatima Ahmed	fatima.ahmed@example.com	doctor3
+Dr. Usman Ali	usman.ali@example.com	doctor4
+Dr. Zara Malik	zara.malik@example.com	doctor5
+
+Store Users
+Name	Email	Password
+John Doe	john.doe@example.com	user1
+Jane Smith	jane.smith@example.com	user2
+
+
+Store Owners
+
+Name: Alice Brown
+Email: alice.brown@store.com
+Password: storeowner1
+
+Name: Bob Smith
+Email: bob.smith@store.com
+Password: storeowner2
+
+Name: Carol Johnson
+Email: carol.johnson@store.com
+Password: storeowner3
+
+Name: David Lee
+Email: david.lee@store.com
+Password: storeowner4
+
+Name: Eva Martinez
+Email: eva.martinez@store.com
+Password: storeowner5

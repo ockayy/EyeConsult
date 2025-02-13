@@ -1,0 +1,84 @@
+/* src/components/CSS/MedicineManagement.css */
+
+.medicine-management-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .medicine-management-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-medicine-button {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 12px 20px;
+    background-color: #38a169;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-medicine-button:hover {
+    background-color: #2f855a;
+  }
+  
+  .medicine-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .medicine-table th,
+  .medicine-table td {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+  }
+  
+  .medicine-table th {
+    background-color: #f7fafc;
+  }
+  
+  .medicine-table tr:nth-child(even) {
+    background-color: #f7fafc;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-button,
+  .delete-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #3182ce;
+    color: #ffffff;
+  }
+  
+  .edit-button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  .delete-button {
+    background-color: #e53e3e;
+    color: #ffffff;
+  }
+  
+  .delete-button:hover {
+    background-color: #c53030;
+  }
+  
+  .form-error {
+    color: red;
+    text-align: center;
+  }
+  

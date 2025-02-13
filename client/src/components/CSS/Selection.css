@@ -1,0 +1,54 @@
+/* Selection.css */
+
+.selection-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  margin: 0px 25px;
+}
+
+.selection-button {
+  display: flex;
+  align-items: center;
+  background-color: #34cb78;
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.selection-button .icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.selection-button:hover {
+  background-color: #2ea565;
+}
+
+.selection-or {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .selection-container {
+    flex-direction: column;
+  }
+
+  .selection-button {
+    margin: 10px 0;
+  }
+
+  .selection-or {
+    margin: 20px 0;
+  }
+}

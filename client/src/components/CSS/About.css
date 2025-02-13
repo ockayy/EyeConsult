@@ -1,0 +1,77 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
+.about-us {
+    padding: 50px 25px;
+
+}
+.about-heading {
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+.about-desc {
+    width: 50rem;
+    line-height: 1.2;
+    font-size: larger;
+    padding-left: 50px;
+}
+.about-mission {
+    background-color: #D0FFF0;
+    padding: 35px;
+}
+.about-heading {
+    color: #232426;
+    padding-top: 25px;
+    padding-left: 50px;
+    margin: 0px;
+}
+.about-desc-mission {
+    width: 35rem;
+    font-size: 36px;
+    padding-left: 50px;
+    margin: 0px;
+    padding-bottom: 25px;
+}
+.colored-text {
+
+    color: #248E6C;
+}
+.about-service{
+    padding-top: 25px;
+    padding-left: 50px;
+}
+.service-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card {
+    width: 400px;
+    height: auto;
+    text-align: center;
+    padding: 80px 0px; 
+}
+.card-img-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 55px;
+}
+.card-img {
+   width: 250px;
+   height: auto; 
+}
+.card-title {
+    margin: 0px;
+    font-size:26px;
+    font-weight: bolder;
+    margin-top: 15px;
+    
+}
+.card-desc {
+    margin: 0;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0px 25px;
+    margin-top: 5px;
+}

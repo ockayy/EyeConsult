@@ -1,0 +1,136 @@
+/* src/components/CSS/LoginStoreOwner.css */
+
+/* Import base styles */
+@import url("base.css");
+
+/* Store Owner Login Container */
+.login-store-owner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--container-bg-color);
+  min-height: 100vh;
+  padding: var(--spacing-medium);
+}
+
+/* Store Owner Login Form */
+.login-store-owner-form {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 400px;
+  width: 100%;
+  margin-top: var(--spacing-large);
+}
+
+.login-store-owner-form__title {
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Form Labels */
+.login-store-owner-form__label {
+  margin-top: var(--spacing-small);
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Store Owner Login Input */
+.login-store-owner-form__input {
+  width: 100%;
+  padding: var(--spacing-small);
+  margin: var(--spacing-small) 0;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
+  transition: border-color 0.3s;
+}
+
+.login-store-owner-form__input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Error Messages */
+.login-store-owner-form__error {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: var(--spacing-small);
+  color: var(--error-color);
+  font-size: var(--font-size-small);
+}
+
+/* Button Group */
+.login-store-owner-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-medium);
+}
+
+/* Submit Button */
+.login-store-owner-form__submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  flex: 1;
+  margin-right: var(--spacing-small);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-store-owner-form__submit-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.login-store-owner-form__submit-button:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* Sign Up Button */
+.signup-button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  flex: 1;
+  margin-left: var(--spacing-small);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.signup-button:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-store-owner-form {
+    padding: var(--spacing-medium);
+  }
+
+  .login-store-owner-actions {
+    flex-direction: column;
+  }
+
+  .login-store-owner-form__submit-button,
+  .signup-button {
+    width: 100%;
+    margin: var(--spacing-small) 0;
+  }
+}

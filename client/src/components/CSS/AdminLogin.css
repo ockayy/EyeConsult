@@ -1,0 +1,62 @@
+/* src/CSS/AdminLogin.css */
+
+/* Reuse shared styles */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343a40; /* Darker background for admin */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.admin-login-form {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-login-form__title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.admin-login-form__label {
+  font-weight: bold;
+}
+
+.admin-login-form__input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.admin-login-form__submit-button {
+  background-color: #343a40;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.admin-login-form__submit-button:hover {
+  background-color: #23272b;
+}
+
+.admin-login-form__error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}

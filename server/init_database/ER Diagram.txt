@@ -1,0 +1,73 @@
+ERD Instructions for Each Entity and Relationship:
+Create Entities and Attributes
+
+
+Admins
+
+Primary Key: admin_id
+Attributes: username, password
+Doctors
+
+Primary Key: doctor_id
+Attributes: name, phoneno, cnic, dob, email, password, experience_years, experience_title, education, current_hospital, fee, description, available_start_time, available_end_time, specialization, services, type, site
+Patients
+
+Primary Key: patient_id
+Attributes: fname, lname, gender, email, phoneno, cnic, password, address, description, type, site
+Store Users
+
+Primary Key: user_id
+Attributes: fname, lname, gender, email, phoneno, cnic, password, address, type, site
+Medicines
+
+Primary Key: medicine_id
+Attributes: name, description, price, stock, category, image, image_type
+Blogs
+
+Primary Key: blog_id
+Attributes: blog_title, blog_description, published_at, blog_image, blog_image_type
+Foreign Key: doctor_id (references Doctors)
+Exercise
+
+Primary Key: ex_id
+Attributes: ex_title, ex_description, ex_pic
+Appointments
+
+Primary Key: appointment_id
+Foreign Keys: patient_id (references Patients), doctor_id (references Doctors)
+Attributes: appointment_date, appointment_time, status
+Orders
+
+Primary Key: order_id
+Foreign Key: user_id (references Store Users)
+Attributes: total_price, status, address
+Order Items
+
+Primary Key: order_item_id
+Foreign Keys: order_id (references Orders), medicine_id (references Medicines)
+Attributes: quantity, price
+
+
+Define Relationships with Notation
+Admins – Standalone, so no direct relationships.
+Doctors:
+One-to-Many relationship with Blogs (A doctor can write multiple blogs).
+One-to-Many relationship with Appointments (A doctor can have multiple appointments).
+Patients:
+One-to-Many relationship with Appointments (A patient can have multiple appointments).
+Store Users:
+One-to-Many relationship with Orders (A store user can place multiple orders).
+Medicines:
+One-to-Many relationship with Order Items (Each medicine can be part of multiple order items).
+Blogs:
+Optionally associated with Doctors (a blog can be authored by a doctor or remain standalone).
+Exercise: Standalone entity.
+Appointments:
+Many-to-One with Patients (An appointment belongs to one patient).
+Many-to-One with Doctors (An appointment belongs to one doctor).
+Orders:
+Many-to-One with Store Users (An order belongs to one store user).
+One-to-Many with Order Items (An order can include multiple order items).
+Order Items:
+Many-to-One with Orders (An order item belongs to one order).
+Many-to-One with Medicines (An order item refers to one medicine).

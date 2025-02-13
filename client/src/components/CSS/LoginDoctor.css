@@ -1,0 +1,159 @@
+/* src/components/CSS/LoginDoctor.css */
+
+/* Import base styles */
+@import url("base.css");
+
+/* Doctor Login Container */
+.doctor-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../Images/background Homepage.svg"); /* Background image for the entire page */
+  min-height: 100vh;
+  padding: var(--spacing-medium);
+}
+
+/* Doctor Login Form */
+.doctor-login-form {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 400px;
+  width: 100%;
+  margin-top: var(--spacing-large);
+}
+
+.input-error {
+  border-color: #ff0000;
+}
+
+.field-error {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.doctor-login-form h1 {
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Form Labels */
+.doctor-login-form label {
+  margin-top: var(--spacing-small);
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Doctor Login Input */
+.doctor-login-input {
+  width: 100%;
+  padding: var(--spacing-small);
+  margin: var(--spacing-small) 0;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
+  transition: border-color 0.3s;
+}
+
+.doctor-login-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Error Messages */
+.error-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: var(--spacing-small);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: var(--font-size-small);
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  color: var(--link-color);
+  text-decoration: underline;
+  margin-bottom: var(--spacing-medium);
+  align-self: flex-end;
+  font-size: var(--font-size-small);
+}
+
+/* Button Group */
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-medium);
+}
+
+/* Doctor Login Submit Button */
+.doctor-login-submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  flex: 1;
+  margin-right: var(--spacing-small);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.doctor-login-submit-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.doctor-login-submit-button:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* Doctor Sign Up Button */
+.doctor-signup-button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  flex: 1;
+  margin-left: var(--spacing-small);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.doctor-signup-button:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .doctor-login-form {
+    padding: var(--spacing-medium);
+  }
+
+  .login-actions {
+    flex-direction: column;
+  }
+
+  .doctor-login-submit-button,
+  .doctor-signup-button {
+    width: 100%;
+    margin: var(--spacing-small) 0;
+  }
+}

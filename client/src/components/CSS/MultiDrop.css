@@ -1,0 +1,63 @@
+/* src/CSS/MultiDrop.css */
+
+.multi-select-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-header {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.dropdown-arrow {
+  margin-left: 10px;
+}
+
+.dropdown-list {
+  position: absolute;
+  z-index: 1;
+  background-color: #f5fefd;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.dropdown-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item:hover {
+  background-color: #e6f7f5;
+}
+
+.dropdown-item input {
+  margin-right: 10px;
+}
+
+.selected-options {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.selected-option {
+  background-color: #34cb78;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}

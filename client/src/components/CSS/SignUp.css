@@ -1,0 +1,63 @@
+/* src/CSS/SignUp.css */
+
+/* Additional styles for Sign-Up forms */
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* MultiSelect Dropdown */
+.form__select {
+  /* Reuse .form__select from SharedStyles.css if applicable */
+}
+
+/* Heading Styles */
+.form-container__title {
+  margin-bottom: 20px;
+}
+
+/* Layout for Sign-Up Pages */
+.signup-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  margin: 0 25px;
+}
+
+.signup-container__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-container__form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* src/CSS/SignUp.css */
+
+.signup-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  margin: 0 25px;
+
+  background-image: url("../Images/background Homepage.svg"); /* Background image for the entire page */
+
+  background-position: center;
+}

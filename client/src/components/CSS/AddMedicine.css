@@ -1,0 +1,57 @@
+/* src/components/CSS/AddMedicine.css */
+
+.add-medicine-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-medicine-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-medicine-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-medicine-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-medicine-form input,
+.add-medicine-form textarea,
+.add-medicine-form select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+}
+
+.add-medicine-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #38a169;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #2f855a;
+}
+
+.form-error {
+  color: red;
+  text-align: center;
+}

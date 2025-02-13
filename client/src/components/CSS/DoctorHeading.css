@@ -1,0 +1,169 @@
+/* DoctorHeading.css */
+
+/* Root variables (optional; adjust as needed) */
+:root {
+  --doctor-header-bg: #ffffff;
+  --doctor-header-text: #333333;
+  --doctor-header-height: 80px;
+  --doctor-header-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  --doctor-primary-color: #34cb78;
+  --doctor-primary-hover: #28a745;
+  --doctor-transition-speed: 0.3s;
+}
+
+/* Overall header container (sticky) */
+.doctor-header {
+  background-color: var(--doctor-header-bg);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: var(--doctor-header-shadow);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Top Row: Includes the doctor dropdown, logo, contact toggle ===== */
+.doctor-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--doctor-header-height);
+  padding: 0 20px;
+}
+
+.doctor-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  background-color: var(--doctor-primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color var(--doctor-transition-speed) ease;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  background-color: var(--doctor-primary-hover);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 140px;
+  box-shadow: var(--doctor-header-shadow);
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 12px;
+  color: var(--doctor-header-text);
+  text-decoration: none;
+  transition: background-color var(--doctor-transition-speed) ease;
+  font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.doctor-header-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-header-logo {
+  height: 50px;
+}
+
+/* Contact toggle button on the right */
+.header-button {
+  cursor: pointer;
+  background-color: var(--doctor-primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color var(--doctor-transition-speed) ease;
+  outline: none;
+}
+
+.header-button:hover {
+  background-color: var(--doctor-primary-hover);
+}
+
+.header-button-right {
+  margin-left: auto;
+}
+
+/* ===== Bottom Row: Navigation links ===== */
+.doctor-header-bottom {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  padding: 8px 20px;
+}
+
+.doctor-header-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.doctor-header-nav a {
+  text-decoration: none;
+  color: var(--doctor-header-text);
+  font-size: 16px;
+  transition: color var(--doctor-transition-speed) ease;
+  position: relative;
+}
+
+.doctor-header-nav a:hover,
+.doctor-header-nav a:focus {
+  color: var(--doctor-primary-color);
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 768px) {
+  .doctor-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .doctor-header-logo {
+    height: 40px;
+  }
+
+  .doctor-header-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdown-toggle,
+  .header-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .doctor-header-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,73 @@
+/* src/components/Messages.css */
+
+/* Container around the entire messages component */
+.messages-container {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Header/title */
+.messages-header {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* Scrollable list of messages */
+.messages-list {
+  border: 1px solid #ccc;
+  height: 150px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Individual message styling */
+.single-message {
+  margin-bottom: 4px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.single-message b {
+  color: #0cc0df; /* Differentiate the sender label */
+}
+
+/* Text area for typing a new message */
+.new-message-textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.new-message-textarea:focus {
+  border-color: #0cc0df;
+  box-shadow: 0 0 3px rgba(12, 192, 223, 0.3);
+}
+
+/* Send button */
+.send-message-btn {
+  background-color: #0cc0df;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.send-message-btn:hover {
+  background-color: #0aa5bd;
+}

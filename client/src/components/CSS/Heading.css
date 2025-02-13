@@ -1,0 +1,565 @@
+/* src/components/CSS/Heading.css */
+
+/* ---------------------------------------
+   CSS Variables for Consistent Theming
+--------------------------------------- */
+:root {
+  --primary-color: #34cb78;
+  --primary-hover: #2daa62;
+  --secondary-color: #007bff;
+  --secondary-hover: #0056b3;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --error-color: #e74c3c;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --header-height: 70px;
+  --transition-speed: 0.3s;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+/* Reset Some Default Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* ---------------------------------------
+   Header Base
+--------------------------------------- */
+.header {
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* The Top Section of the Header */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 20px;
+  position: relative; /* For the mobile nav toggle positioning */
+  flex-direction: row; /* Change to row for desktop */
+}
+
+/* Logo Container and Styles */
+.header-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 45px;
+}
+
+/* Home Link Next to Logo (Desktop Only) */
+.home-link-desktop {
+  margin-left: 15px;
+}
+
+.home-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  transition: color var(--transition-speed) ease;
+}
+
+.home-link:hover,
+.home-link:focus {
+  color: var(--primary-color);
+}
+
+/* ---------------------------------------
+   Navigation (Desktop & Mobile)
+--------------------------------------- */
+.header-nav {
+  display: none;
+}
+
+/* Navigation Links Container */
+.header-nav-links {
+  display: flex; /* Ensures horizontal alignment on desktop */
+  gap: 20px; /* Reduced from 30px for less spacing */
+  align-items: center; /* Vertically centers the links */
+}
+
+/* Desktop Navigation Links */
+.desktop-nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 16px;
+  transition: color var(--transition-speed) ease;
+  padding: 0 10px; /* Adds padding for better spacing and clickable area */
+  height: 100%; /* Ensures links take full height of the container */
+  display: flex;
+  align-items: center; /* Vertically centers the link text */
+}
+
+.desktop-nav-links a:hover,
+.desktop-nav-links a:focus {
+  color: var(--primary-color);
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 8px 0;
+  width: 100%;
+  transition: color var(--transition-speed) ease;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:focus {
+  color: var(--primary-color);
+}
+
+/* ---------------------------------------
+   Actions Area (Cart, Dropdown, etc.)
+--------------------------------------- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Cart Icon & Count */
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  transition: color var(--transition-speed) ease;
+}
+
+.cart-link:hover,
+.cart-link:focus {
+  color: var(--primary-hover);
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: var(--error-color);
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ---------------------------------------
+   Dropdown Button Styles
+--------------------------------------- */
+.dropdown-toggle {
+  background-color: var(--primary-color) !important;
+  border: none !important;
+  transition: background-color var(--transition-speed) ease !important;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  background-color: var(--primary-hover) !important;
+  outline: none;
+}
+
+/* ---------------------------------------
+   Auth Buttons (Store User Login, etc.)
+--------------------------------------- */
+.store-auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-button {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: color var(--transition-speed) ease,
+    background-color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.auth-button-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.auth-button-primary:hover,
+.auth-button-primary:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.auth-button-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.auth-button-secondary:hover,
+.auth-button-secondary:focus {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+}
+
+/* ---------------------------------------
+   Hide the hamburger icon on desktop
+--------------------------------------- */
+.mobile-nav-toggle {
+  display: none;
+}
+
+/* ---------------------------------------
+   Search Bar Styles for Desktop
+--------------------------------------- */
+.header-search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the search bar to the center */
+  margin-right: auto; /* Center alignment */
+}
+
+.header-search-input {
+  padding: 8px 12px; /* Decreased padding */
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-size: 16px; /* Decreased font size */
+  width: 350px; /* Increased width for central placement */
+  transition: border-color var(--transition-speed) ease,
+    width var(--transition-speed) ease;
+}
+
+.header-search-input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.header-search-input:focus {
+  border-color: var(--primary-color);
+}
+
+.header-search-button {
+  padding: 8px 12px; /* Decreased padding */
+  border: 1px solid var(--primary-color);
+  border-left: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+    padding var(--transition-speed) ease;
+  font-size: 16px; /* Ensure the icon scales appropriately */
+}
+
+.header-search-button:hover,
+.header-search-button:focus {
+  background-color: var(--primary-hover);
+  outline: none;
+}
+
+/* ---------------------------------------
+   Search Bar Styles for Mobile
+--------------------------------------- */
+.mobile-header-search-form {
+  display: none; /* Hidden by default, shown when rendered */
+  flex: 1;
+}
+
+.mobile-header-search-input {
+  padding: 8px 12px; /* Decreased padding */
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-size: 16px; /* Decreased font size */
+  width: 250px; /* Increased width for better visibility */
+  transition: border-color var(--transition-speed) ease,
+    width var(--transition-speed) ease;
+}
+
+.mobile-header-search-input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.mobile-header-search-input:focus {
+  border-color: var(--primary-color);
+}
+
+.mobile-header-search-button {
+  padding: 8px 12px; /* Decreased padding */
+  border: 1px solid var(--primary-color);
+  border-left: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+    padding var(--transition-speed) ease;
+  font-size: 16px;
+}
+
+.mobile-header-search-button:hover,
+.mobile-header-search-button:focus {
+  background-color: var(--primary-hover);
+  outline: none;
+}
+
+/* ---------------------------------------
+   Responsive Layout
+--------------------------------------- */
+@media (max-width: 768px) {
+  /* Show the Mobile Nav Toggle (Hamburger) */
+  .mobile-nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-color);
+    /* Remove absolute positioning to allow flex alignment */
+    position: static;
+    z-index: 1001; /* Above the nav */
+    margin-right: auto; /* Align to the left */
+  }
+
+  /* Adjust Header-Top for Horizontal Layout */
+  .header-top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: auto;
+    gap: 0;
+  }
+
+  /* Center the logo */
+  .header-logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+
+  /* Hide the desktop navigation links on mobile */
+  .desktop-nav-links {
+    display: none;
+  }
+
+  /* Show the mobile navigation menu */
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #f2f2f2;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed) ease-out;
+    z-index: 999; /* Ensure It Appears Above Other Elements */
+  }
+
+  /* If .open is Present, Expand the Nav for Mobile */
+  .header-nav.open {
+    max-height: 500px; /* Can Adjust Based on Content */
+  }
+
+  /* Navigation Links for Mobile */
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  /* Adjust header-actions to align right */
+  .header-actions {
+    margin-left: 0; /* Reset to default */
+    gap: 10px; /* Reduce gap for better spacing on mobile */
+  }
+
+  /* Adjust the mobile-nav-toggle button */
+  .mobile-nav-toggle {
+    margin-right: auto;
+  }
+
+  /* Additional Styles for Mobile Navigation (Optional) */
+  .mobile-nav-links a {
+    font-size: 18px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  /* Adjust Search Bar in Mobile Nav */
+  .mobile-header-search-form {
+    width: 100%;
+    margin-top: 15px;
+    display: flex; /* Ensure it's displayed as flex */
+  }
+
+  /* Hide the desktop search bar on mobile */
+  .header-search-form {
+    display: none;
+  }
+
+  /* Show mobile cart */
+  .mobile-cart {
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* Hide desktop cart on mobile */
+  .desktop-cart {
+    display: none;
+  }
+
+  /* Adjust User Dropdown Toggle on Mobile */
+  .dropdown-toggle {
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* ---------------------------------------
+     Cart Text Container for Mobile
+  --------------------------------------- */
+  .cart-text-container.mobile-cart {
+    width: 100%;
+  }
+
+  .cart-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 0;
+    transition: color var(--transition-speed) ease;
+  }
+
+  .cart-link:hover,
+  .cart-link:focus {
+    color: var(--primary-color);
+  }
+
+  /* Adjust the cart count badge when using text */
+  .cart-text-container .cart-count {
+    position: static;
+    transform: none;
+    margin-left: 10px;
+    background-color: var(--error-color);
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-auth-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .auth-button {
+    width: 100%;
+  }
+
+  /* Adjust Search Input Width on Very Small Screens */
+  .header-search-input,
+  .mobile-header-search-input {
+    width: 150px;
+  }
+}
+
+/* ---------------------------------------
+   Logout Overlay with Animation
+--------------------------------------- */
+.logout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  z-index: 9999;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.logout-overlay p {
+  margin-top: 20px;
+}
+
+/* Spinner Styles */
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-top: 8px solid #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade-out Animation */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

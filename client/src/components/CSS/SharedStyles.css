@@ -1,0 +1,143 @@
+/* SharedStyles.css */
+
+/* Global Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34cb78;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Title */
+.form-container__title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Input Fields */
+.form__input,
+.form__select,
+.form__textarea {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* Submit Button */
+.form__submit-button {
+  background-color: #34cb78;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form__submit-button:hover {
+  background-color: #28a745;
+}
+
+/* Error Messages */
+.form__error {
+  color: red;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Success Message */
+.form__success {
+  color: green;
+  text-align: center;
+}
+
+/* Image Container */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image-container,
+  .form-wrapper {
+    max-width: 100%;
+  }
+}
+/* src/CSS/SharedStyles.css */
+
+/* Login Container */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #34CB78;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-container__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container__image img {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  height: auto;
+  border-radius: 10px;
+}
+
+.login-form {
+  flex: 1;
+  background-color: white;
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Adjust the form styles if necessary */

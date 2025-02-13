@@ -1,0 +1,184 @@
+/* Ensure the parent container takes full height and centers its children */
+
+/* Ensure the html and body take full height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Background Container: centers its children both horizontally and vertically */
+.profile-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background-image: url("../Images/background Homepage.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 0; /* Optional padding if needed */
+}
+
+/* Main Container */
+.profile-container {
+  background-color: white;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* This becomes less critical when the parent is centering using flex */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust the appointment card if needed */
+.appointment-card {
+  width: 90%;
+  max-width: 700px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Basic text styling inside the card */
+.appointment-card p {
+  font-size: 0.95rem;
+  margin: 0.35rem 0;
+  color: #444;
+}
+.appointment-card b {
+  color: #333;
+}
+
+/* 2. Buttons in a row for appointment actions */
+.appt-actions {
+  margin-top: 1rem;
+}
+
+.cancel-appointment-btn,
+.update-appointment-btn,
+.save-btn,
+.toggle-messages-btn,
+.start-call-btn {
+  display: inline-block;
+  margin: 0.4rem 0.4rem 0.4rem 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cancel: red */
+.cancel-appointment-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+.cancel-appointment-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Update: teal/blue */
+.update-appointment-btn {
+  background-color: #0cc0df;
+  color: #fff;
+}
+.update-appointment-btn:hover {
+  background-color: #0aa5bd;
+}
+
+/* Save: greenish? */
+.save-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+.save-btn:hover {
+  background-color: #218838;
+}
+
+/* Toggle/hide messages: bluish */
+.toggle-messages-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+.toggle-messages-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Start call: purple or your choice */
+.start-call-btn {
+  background-color: #6f42c1;
+  color: #fff;
+}
+.start-call-btn:hover {
+  background-color: #5a379b;
+}
+
+/* 3. Date/Time Edit Form */
+.datetime-edit-form {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+.datetime-edit-form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+.datetime-edit-form input {
+  width: 60%;
+  max-width: 300px;
+  padding: 0.4rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+/* 4. Prescription Form */
+.prescription-form {
+  margin-top: 1rem;
+  background-color: #fafafa;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+.prescription-form textarea {
+  width: 90%;
+  max-width: 600px;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+.prescription-form textarea:focus {
+  border-color: #0cc0df;
+  box-shadow: 0 0 3px rgba(12, 192, 223, 0.3);
+}
+.prescription-form select {
+  width: 50%;
+  max-width: 300px;
+  padding: 0.4rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+}
+
+/* 5. Messages area styling */
+.messages-area {
+  margin-top: 1rem;
+}

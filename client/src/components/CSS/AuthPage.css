@@ -1,0 +1,86 @@
+/* src/components/CSS/AuthPage.css */
+
+.auth-container {
+    width: 400px;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .auth-toggle-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-toggle-button.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .auth-toggle-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .user-type-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-type-button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-type-button.active {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .user-type-button:hover {
+    background-color: #1e7e34;
+    color: #fff;
+  }
+  
+  .auth-form {
+    margin-bottom: 10px;
+  }
+  
+  .forgot-password-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .forgot-password-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .forgot-password-link a:hover {
+    text-decoration: underline;
+  }
+  

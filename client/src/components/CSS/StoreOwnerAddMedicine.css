@@ -1,0 +1,50 @@
+/* StoreOwnerAddMedicine.css */
+
+.store-owner-add-medicine-container {
+    padding: 20px;
+  }
+  
+  .store-owner-add-medicine-form {
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-error {
+    color: red;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,64 @@
+table_name,column_name,data_type
+doctors,experience_title,character varying
+doctors,available_end_time,time without time zone
+doctors,education,text
+doctors,profile_pic_type,character varying
+doctors,description,text
+doctors,current_hospital,character varying
+doctors,password,character varying
+doctors,fee,numeric
+doctors,available_start_time,time without time zone
+doctors,email,character varying
+doctors,services,ARRAY
+doctors,name,character varying
+doctors,specialization,ARRAY
+doctors,profile_pic,bytea
+doctors,doctor_id,integer
+doctors,phoneno,character varying
+doctors,experience_years,integer
+doctors,dob,date
+doctors,degree_pic_type,character varying
+doctors,cnic,character varying
+doctors,degree_pic,bytea
+appointments,doctor_id,integer
+appointments,appointment_time,time without time zone
+appointments,description,text
+appointments,status,character varying
+appointments,patient_id,integer
+appointments,appointment_id,integer
+appointments,appointment_date,date
+blogs,blog_id,integer
+blogs,blog_description,text
+blogs,blog_title,character varying
+blogs,published_at,timestamp without time zone
+blogs,blog_image,bytea
+partners,cnic,character varying
+partners,store_address,text
+partners,owner_name,character varying
+partners,partner_id,integer
+partners,secp_certificate_pic_type,character varying
+partners,store_phoneno,character varying
+partners,secp_certificate_pic,bytea
+partners,email,character varying
+partners,description,text
+partners,store_name,character varying
+partners,password,character varying
+partners,profile_pic,bytea
+partners,owner_phoneno,character varying
+partners,profile_pic_type,character varying
+patient,patient_id,integer
+patient,fname,character varying
+patient,lname,character varying
+patient,gender,character varying
+patient,email,character varying
+patient,phoneno,character varying
+patient,cnic,character varying
+patient,password,character varying
+patient,description,text
+patient,profile_pic,bytea
+patient,profile_pic_type,character varying
+patient,token,character varying
+exercise,ex_id,integer
+exercise,ex_title,character varying
+exercise,ex_description,text
+exercise,ex_pic,bytea

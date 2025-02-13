@@ -1,0 +1,193 @@
+/* src/components/CSS/MedicineDetail.css */
+
+/* Container for the Medicine Detail page */
+.medicine-details-container {
+  padding: 40px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Error Message Styling */
+.error-message {
+  font-size: 1.2rem;
+  color: #d9534f;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Back Button */
+.back-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+/* Medicine Details Card */
+.medicine-details-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Image Section */
+.medicine-details-image-section {
+  flex: 1 1 40%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medicine-details-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.medicine-image-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  font-size: 1rem;
+}
+
+/* Information Section */
+.medicine-details-info {
+  flex: 1 1 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.medicine-details-info h2 {
+  margin-bottom: 15px;
+  color: #333333;
+  font-size: 2rem;
+}
+
+.description {
+  color: #555555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.stock,
+.category {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.quantity-selector input {
+  width: 60px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.quantity-selector input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Add to Cart Button */
+.button {
+  padding: 12px 25px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .medicine-details-card {
+    flex-direction: column;
+  }
+
+  .medicine-details-image-section,
+  .medicine-details-info {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .medicine-details-container {
+    padding: 20px;
+  }
+
+  .medicine-details-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .medicine-details-info .price {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .quantity-selector input {
+    width: 50px;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}

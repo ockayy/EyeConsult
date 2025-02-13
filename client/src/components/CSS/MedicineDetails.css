@@ -1,0 +1,302 @@
+/* src/components/store/CSS/MedicineDetails.css */
+
+/* Container for the entire Medicine Details page */
+.medicine-details-container {
+  padding: 40px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Back Button */
+.back-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #d9534f;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Details Card */
+.details-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Image Section */
+.details-image-section {
+  flex: 1 1 40%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medicine-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.medicine-image-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  font-size: 1rem;
+}
+
+/* Information Section */
+.details-info-section {
+  flex: 1 1 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-info-section h2 {
+  margin-bottom: 15px;
+  color: #333333;
+  font-size: 2rem;
+}
+
+.description {
+  color: #555555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.stock,
+.category,
+.sold-by {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.sold-by .store-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sold-by .store-link:hover {
+  text-decoration: underline;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.quantity-selector input {
+  width: 60px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.quantity-selector input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.action-buttons .add-to-cart-button,
+.action-buttons .buy-now-button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.add-to-cart-button {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.add-to-cart-button:hover {
+  background-color: #218838;
+}
+
+.buy-now-button {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.buy-now-button:hover {
+  background-color: #0069d9;
+}
+
+/* Pagination (if applicable) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.pagination-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* Store Link */
+.store-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.store-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .details-card {
+    flex-direction: column;
+  }
+
+  .details-image-section,
+  .details-info-section {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .medicine-details-container {
+    padding: 30px 20px;
+  }
+
+  .details-info-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .action-buttons .add-to-cart-button,
+  .action-buttons .buy-now-button {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .medicine-details-container {
+    padding: 20px 10px;
+  }
+
+  .details-info-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .action-buttons .add-to-cart-button,
+  .action-buttons .buy-now-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .quantity-selector input {
+    width: 50px;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}

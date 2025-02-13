@@ -1,0 +1,59 @@
+/* src/components/CSS/EditMedicine.css */
+
+/* Same styles as AddMedicine.css, but you can adjust colors if needed */
+
+.edit-medicine-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-medicine-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-medicine-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-medicine-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.edit-medicine-form input,
+.edit-medicine-form textarea,
+.edit-medicine-form select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+}
+
+.edit-medicine-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #357ab8;
+}
+
+.form-error {
+  color: red;
+  text-align: center;
+}

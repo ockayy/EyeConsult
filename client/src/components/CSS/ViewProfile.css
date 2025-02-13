@@ -1,0 +1,312 @@
+/* --------------------------------------------
+   MAIN PROFILE STYLING
+   -------------------------------------------- */
+
+/* Profile background and container */
+.profile-background {
+  background-image: url("../Images/background Homepage.svg");
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.profile-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Profile header: image + text side-by-side */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.video-call-section {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.join-call-btn, .end-call-btn {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.join-call-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.end-call-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.call-status {
+  color: #666;
+  font-style: italic;
+}
+
+/* Circular profile pic */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+/* Basic info or edit fields on the right */
+.profile-info {
+  flex: 1;
+}
+
+/* Input fields in edit mode */
+.profile-info input[type="text"],
+.profile-info input[type="email"],
+.profile-info input[type="password"],
+.profile-info select {
+  display: block;
+  margin-bottom: 0.8rem;
+  padding: 0.6rem;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.profile-info input:focus,
+.profile-info select:focus {
+  border-color: #0cc0df;
+  box-shadow: 0 0 4px rgba(12, 192, 223, 0.4);
+}
+
+/* Edit/Save buttons */
+.edit-button,
+.save-button {
+  background-color: #0cc0df;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover,
+.save-button:hover {
+  background-color: #0aa5bd;
+}
+
+/* Sections below the header */
+.profile-details {
+  margin-top: 1.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h3.about-section {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Textarea for description */
+.Doc-description {
+  width: 80%;
+  max-width: 500px;
+  height: 120px;
+  resize: vertical;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.Doc-description:focus {
+  border-color: #0cc0df;
+  box-shadow: 0 0 4px rgba(12, 192, 223, 0.4);
+}
+
+/* Appointment card styling */
+.appointment-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-card p {
+  margin: 0.4rem 0;
+  color: #555;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.appointment-card b {
+  color: #333;
+}
+
+/* Buttons inside the appointment card */
+.update-appointment-btn,
+.cancel-appointment-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-right: 0.6rem;
+  margin-top: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Edit (blue) */
+.update-appointment-btn {
+  background-color: #0cc0df;
+  color: #fff;
+}
+.update-appointment-btn:hover {
+  background-color: #0aa5bd;
+}
+
+/* Cancel (red) */
+.cancel-appointment-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+.cancel-appointment-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Small label styling for the inline appointment edit form */
+.appointment-card label {
+  display: block;
+  margin: 0.4rem 0 0.2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* date/time/description inputs in the edit form */
+.appointment-card input[type="date"],
+.appointment-card input[type="time"],
+.appointment-card input[type="text"] {
+  display: block;
+  margin-bottom: 0.8rem;
+  width: 60%;
+  max-width: 300px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.appointment-card input:focus {
+  border-color: #0cc0df;
+  box-shadow: 0 0 3px rgba(12, 192, 223, 0.3);
+}
+
+/* Horizontal rule styling */
+.profile-container hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1.5rem 0;
+}
+
+/* --------------------------------------------
+   MESSAGES / CHAT STYLING
+   -------------------------------------------- */
+
+/* Messages container surrounding the entire chat */
+.messages-container {
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Header/title for the messages box */
+.messages-header {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* The scrollable list of messages */
+.messages-list {
+  border: 1px solid #ccc;
+  height: 150px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Individual message styling */
+.single-message {
+  margin-bottom: 4px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.single-message b {
+  color: #0cc0df; /* Differentiates the sender label */
+}
+
+/* Text area where user types a new message */
+.new-message-textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.new-message-textarea:focus {
+  border-color: #0cc0df;
+  box-shadow: 0 0 3px rgba(12, 192, 223, 0.3);
+}
+
+/* Send button for messages */
+.send-message-btn {
+  background-color: #0cc0df;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.send-message-btn:hover {
+  background-color: #0aa5bd;
+}

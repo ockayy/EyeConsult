@@ -1,0 +1,173 @@
+/* DoctorDashboard.css */
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .DocDash-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .DocDash-container-home {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Images/background Homepage.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(20, 22, 21, 0.5); 
+    background-blend-mode: overlay;
+    color: white;
+    text-align: center;
+    padding: 50px 50px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+  }
+  
+  .DocDash-container-Heading {
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px;
+    padding: 35px 0px;
+    color: white;
+  }
+    
+  /* 4k Screen */
+  @media only screen and (min-width: 2560px) {
+    .DocDash-container {
+      height: 400px;
+      padding: 70px 100px;
+    }
+  
+    .DocDash-container-Heading {
+      font-size: 56px;
+      padding-top: 50px;
+    }
+  
+    .DocDash-Search-Bar {
+      width: 70rem;
+      height: 3rem;
+    }
+  
+    .DocDash-Oct-desc {
+      width: 600px;
+      font-size: 20px;
+    }
+  
+    .DocDash-List {
+      font-size: 20px;
+    }
+  
+    .DocDash-List li {
+      background-size: 30px 30px;
+    }
+  }
+  
+  /* Laptop L Screen */
+  @media only screen and (min-width: 1440px) and (max-width: 2559px) {
+    .DocDash-container {
+      height: 350px;
+      padding: 60px 80px;
+    }
+  
+    .DocDash-container-Heading {
+      font-size: 50px;
+      padding-top: 45px;
+    }
+  
+    .DocDash-Search-Bar {
+      width: 60rem;
+      height: 2.8rem;
+    }
+  
+    .DocDash-Oct-desc {
+      width: 500px;
+      font-size: 18px;
+    }
+  
+    .DocDash-List {
+      font-size: 18px;
+    }
+  
+    .DocDash-List li {
+      background-size: 25px 25px;
+    }
+  }
+  
+  /* Laptop Screen */
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .DocDash-container {
+      height: 300px;
+      padding: 50px 70px;
+    }
+  
+    .DocDash-container-Heading {
+      font-size: 44px;
+      padding-top: 40px;
+    }
+  
+    .DocDash-Search-Bar {
+      width: 50rem;
+      height: 2.5rem;
+    }
+  
+    .DocDash-Oct-desc {
+      width: 450px;
+      font-size: 16px;
+    }
+  
+    .DocDash-List {
+      font-size: 16px;
+    }
+  
+    .DocDash-List li {
+      background-size: 22px 22px;
+    }
+  }
+  
+  /* Tablet Screen */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .DocDash-container {
+      height: 250px;
+      padding: 40px 50px;
+    }
+  
+    .DocDash-container-Heading {
+      font-size: 38px;
+      padding-top: 35px;
+    }
+  
+    .DocDash-Search-Bar {
+      width: 40rem;
+      height: 2.5rem;
+    }
+  
+    .DocDash-Vid-List {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .DocDash-Oct-desc {
+      width: 350px;
+      font-size: 14px;
+    }
+  
+    .DocDash-List {
+      font-size: 14px;
+    }
+  
+    .DocDash-List li {
+      padding-left: 25px;
+      margin: 10px;
+      background-size: 20px 20px;
+    }
+  }
+  

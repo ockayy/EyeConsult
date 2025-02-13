@@ -1,0 +1,12 @@
+.Doc-input {
+    padding: 3px;
+    width: 16rem;
+    height: 2rem;
+    margin: 10px;
+    border-radius: 10px;
+}
+.Doc-description {
+    width: 45rem;
+    height: 30rem; 
+    resize: none; 
+}

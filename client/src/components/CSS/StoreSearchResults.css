@@ -1,0 +1,73 @@
+/* Example styling for the search results component */
+.search-results-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+  }
+  
+  .search-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .loading-text,
+  .no-results-text {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+  }
+  
+  /* Grid of medicine cards */
+  .medicine-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  /* Individual medicine card */
+  .medicine-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .medicine-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image styling */
+  .medicine-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 0.75rem;
+    object-fit: cover;
+  }
+  
+  /* Price styling */
+  .price {
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  /* "Details" button */
+  .details-button {
+    background-color: #007bff; /* Bootstrap Primary color, adjust as needed */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .details-button:hover {
+    background-color: #0056b3;
+  }
+  

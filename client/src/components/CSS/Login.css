@@ -1,0 +1,170 @@
+/* src/components/CSS/Login.css */
+
+/* CSS Variables for consistent theming */
+:root {
+  --primary-color: #34cb78;
+  --primary-hover: #28a745;
+  --secondary-color: #007bff;
+  --secondary-hover: #0056b3;
+  --background-color: #f5f5f5;
+  --form-background: #ffffff;
+  --text-color: #333333;
+  --error-color: #e74c3c;
+  --input-border: #cccccc;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-form-wrapper {
+  background-color: var(--form-background);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form__title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.login-form__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.login-form__input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-form__input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.login-form__submit-button,
+.signup-button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-form__submit-button {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.login-form__submit-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.login-form__submit-button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.signup-button {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.signup-button:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-2px);
+}
+
+.signup-button:focus {
+  outline: 2px dashed var(--text-color);
+  outline-offset: 4px;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover,
+.forgot-password-link:focus {
+  color: var(--secondary-hover);
+  text-decoration: underline;
+}
+
+/* Error Messages */
+.error-messages {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-form-wrapper {
+    padding: 30px 20px;
+  }
+
+  .login-form__title {
+    font-size: 1.5rem;
+  }
+
+  .login-actions {
+    flex-direction: column;
+  }
+
+  .login-form__submit-button,
+  .signup-button {
+    width: 100%;
+  }
+}

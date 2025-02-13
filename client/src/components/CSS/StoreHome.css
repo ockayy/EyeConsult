@@ -1,0 +1,244 @@
+/* src/components/CSS/StoreHome.css */
+
+/* General Styles */
+.store-homepage-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filter-sort-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.filter-sort-container .categories,
+.filter-sort-container .sorting {
+  display: flex;
+  align-items: center;
+}
+
+.filter-sort-container label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.filter-sort-container select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Medicine Grid */
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Medicine Card */
+.medicine-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.medicine-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.medicine-image-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 16px;
+}
+
+.medicine-card h3 {
+  font-size: 1.2rem;
+  margin: 15px;
+  color: #333;
+}
+
+.medicine-card p {
+  font-size: 0.9rem;
+  margin: 0 15px 10px 15px;
+  color: #666;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 15px 10px 15px;
+  color: #2c3e50;
+}
+
+.medicine-card p:nth-of-type(2) {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.medicine-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+}
+
+.add-to-cart-button,
+.details-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-to-cart-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.add-to-cart-button:hover {
+  background-color: #218838;
+}
+
+.details-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.details-button:hover {
+  background-color: #0069d9;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.pagination-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid #007bff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination-button:disabled {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.pagination-button:not(:disabled):hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-sort-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .medicine-card img,
+  .medicine-image-placeholder {
+    height: 180px;
+  }
+
+  .medicine-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .medicine-card p {
+    font-size: 0.85rem;
+  }
+
+  .price {
+    font-size: 0.95rem;
+  }
+
+  .add-to-cart-button,
+  .details-button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .pagination-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .pagination-info {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .medicine-card img,
+  .medicine-image-placeholder {
+    height: 150px;
+  }
+
+  .medicine-card h3 {
+    font-size: 1rem;
+  }
+
+  .medicine-card p {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+
+  .add-to-cart-button,
+  .details-button {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+
+  .pagination-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .pagination-info {
+    font-size: 0.85rem;
+  }
+}

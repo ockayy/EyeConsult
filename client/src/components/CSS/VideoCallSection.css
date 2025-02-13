@@ -1,0 +1,63 @@
+.video-call-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+  }
+  
+  .video-frame-container {
+    width: 100%;
+    min-height: 400px; /* Adjust this value as needed */
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .video-frame-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .join-call-btn, .end-call-btn {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .join-call-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+  }
+  
+  .join-call-btn:hover {
+    background-color: #218838;
+  }
+  
+  .end-call-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .end-call-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .join-call-btn:disabled, .end-call-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .call-status {
+    color: #6c757d;
+    font-style: italic;
+    text-align: center;
+    margin: 10px 0;
+  }

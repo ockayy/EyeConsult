@@ -1,0 +1,69 @@
+/* SignUpStoreOwner.css */
+
+.signup-store-owner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.signup-store-owner-form {
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.signup-store-owner-form__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-store-owner-form__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.signup-store-owner-form__input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-store-owner-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup-store-owner-form__submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-store-owner-form__submit-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-store-owner__login-link {
+  text-decoration: none;
+  color: #28a745;
+}
+
+.signup-store-owner__login-link:hover {
+  text-decoration: underline;
+}
+
+.signup-store-owner-form__error {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}

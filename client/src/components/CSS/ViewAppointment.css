@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.appointments-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 800px; /* Optional: set a maximum width */
+  margin: 0 auto;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+#left-align {
+  text-align: left;
+}
+
+.P-about {
+  text-align: left;
+}
