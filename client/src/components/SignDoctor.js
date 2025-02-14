@@ -209,7 +209,7 @@ function SignDoctor() {
       formDataToSend.append("specializations", JSON.stringify(selectedSpecializations));
       formDataToSend.append("services", JSON.stringify(selectedServices));
 
-      const response = await fetch("/api/signupdoctor", {
+      const response = await fetch("https://eyeconsult.onrender.com/api/signupdoctor", {
         method: "POST",
         body: formDataToSend,
       });
