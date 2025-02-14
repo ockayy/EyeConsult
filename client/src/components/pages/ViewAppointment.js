@@ -20,7 +20,7 @@ function ViewAppointments() {
     const fetchData = async () => {
       try {
         // 1) Fetch doctor user
-        const doctorRes = await fetch("/api/user", {
+        const doctorRes = await fetch("https://eyeconsult.onrender.com/api/user", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!doctorRes.ok) throw new Error("Unable to fetch doctor info");
@@ -28,7 +28,7 @@ function ViewAppointments() {
         setDoctor(doctorData);
 
         // 2) Fetch appointments
-        const apptRes = await fetch("/api/doctor/appointments", {
+        const apptRes = await fetch("https://eyeconsult.onrender.com/api/doctor/appointments", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!apptRes.ok) throw new Error("Unable to fetch appointments");
@@ -53,7 +53,7 @@ function ViewAppointments() {
 
     const token = localStorage.getItem("mainSiteToken");
     try {
-      const res = await fetch(`/api/appointments/${appointmentId}/cancel`, {
+      const res = await fetch(`https://eyeconsult.onrender.com/api/appointments/${appointmentId}/cancel`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -76,7 +76,7 @@ function ViewAppointments() {
   ) => {
     try {
       const res = await fetch(
-        `/api/appointments/${appointmentId}/prescription`,
+        `https://eyeconsult.onrender.com/api/appointments/${appointmentId}/prescription`,
         {
           method: "PUT",
           headers: {
@@ -102,7 +102,7 @@ function ViewAppointments() {
   // **Update date/time** for appointment
   const handleUpdateDateTime = async (appointmentId, date, time) => {
     try {
-      const res = await fetch(`/api/appointments/${appointmentId}`, {
+      const res = await fetch(`https://eyeconsult.onrender.com/api/appointments/${appointmentId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -131,7 +131,7 @@ function ViewAppointments() {
   // Start a call (create a calls row or dial phone)
   const handleStartCall = async (appointmentId) => {
     try {
-      const res = await fetch(`/api/appointments/${appointmentId}/calls`, {
+      const res = await fetch(`https://eyeconsult.onrender.com/api/appointments/${appointmentId}/calls`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
