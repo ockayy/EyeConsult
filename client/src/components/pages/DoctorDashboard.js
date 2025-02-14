@@ -21,7 +21,7 @@ function DoctorDashboard() {
 
     const fetchDoctorData = async () => {
       try {
-        const response = await fetch("/api/user", {
+        const response = await fetch("https://eyeconsult.onrender.com/api/user", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
