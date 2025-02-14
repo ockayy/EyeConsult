@@ -23,8 +23,8 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 // Near the top of your server.js
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://eyeconsult.onrender.com', // Add your frontend URL when deployed
-  process.env.NODE_ENV === 'production' ? 'https://your-frontend-domain.onrender.com' : undefined
+  'https://eyecareconsult.onrender.com', // Add your frontend URL when deployed
+  process.env.NODE_ENV === 'production' ? 'https://eyecareconsult.onrender.com' : undefined
 ].filter(Boolean);
 
 app.use(cors({
