@@ -109,7 +109,7 @@ function SignPatient() {
     }
 
     try {
-      const response = await fetch("/api/signuppatient", {
+      const response = await fetch("https://eyeconsult.onrender.com/api/signuppatient", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
