@@ -13,7 +13,7 @@ function Doctors() {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await fetch('/api/doctors');
+        const response = await fetch('https://eyeconsult.onrender.com/api/doctors');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
