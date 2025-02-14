@@ -18,7 +18,7 @@ function Dashboard() {
 
     const fetchUser = async () => {
       try {
-        const response = await fetch("/api/user", {
+        const response = await fetch("https://eyeconsult.onrender.com/api/user", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
