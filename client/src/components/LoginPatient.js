@@ -77,7 +77,7 @@ function LoginPatient() {
 
     setLoading(true);
     try {
-      const response = await fetch("/api/loginpatient", {
+      const response = await fetch("https://eyeconsult.onrender.com/api/loginpatient", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
