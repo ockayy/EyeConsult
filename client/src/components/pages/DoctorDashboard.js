@@ -36,8 +36,8 @@ function DoctorDashboard() {
         const data = await response.json();
         setDoctor(data);
 
-        // Fetch doctor's appointments
-        const appointmentsResponse = await fetch("/api/doctor/appointments", {
+        //  doctor's appointments
+        const appointmentsResponse = await fetch("https://eyeconsult.onrender.com/api/doctor/appointments", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -61,7 +61,7 @@ function DoctorDashboard() {
   const handleCancel = async (appointmentId) => {
     try {
       const token = localStorage.getItem("mainSiteToken");
-      await fetch(`/api/appointments/${appointmentId}/cancel`, {
+      await fetch(`https://eyeconsult.onrender.com/api/appointments/${appointmentId}/cancel`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
