@@ -62,7 +62,7 @@ function AppointmentCard({
     const checkCallStatus = async () => {
       try {
         const response = await axios.get(
-          `/api/appointments/${appointment_id}/call-status`,
+          `https://eyeconsult.onrender.com/api/appointments/${appointment_id}/call-status`,
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -91,7 +91,7 @@ function AppointmentCard({
       console.log('Starting call for appointment:', appointment_id);
       
       const response = await axios.post(
-        `/api/appointments/${appointment_id}/create-room`,
+        `https://eyeconsult.onrender.com/api/appointments/${appointment_id}/create-room`,
         {},
         {
           headers: { 
@@ -131,7 +131,7 @@ function AppointmentCard({
     setIsLoading(true);
     try {
       await axios.post(
-        `/api/calls/${appointment_id}/join`,
+        `https://eyeconsult.onrender.com/api/calls/${appointment_id}/join`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -150,7 +150,7 @@ function AppointmentCard({
     setIsLoading(true);
     try {
       await axios.post(
-        `/api/calls/${appointment_id}/end`,
+        `https://eyeconsult.onrender.com/api/calls/${appointment_id}/end`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` }
